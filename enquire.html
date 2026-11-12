@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#050505">
+  <meta name="description" content="Tell Alleyne Automotive what vehicle you are looking for.">
+  <title>Make an Enquiry | Alleyne Automotive</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/content.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="enquiry-page">
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="Alleyne Automotive home">
+        <img src="assets/alleyne-logo.webp" alt="Alleyne Automotive">
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="index.html#sourcing">Sourcing</a>
+        <a href="index.html#recently-sourced">Recently Sourced</a>
+        <a class="active" href="enquire.html">Contact</a>
+      </nav>
+
+      <a class="header-enquire" href="#enquiry-form">
+        <span class="whatsapp-mark" aria-hidden="true">◔</span>
+        Enquire
+      </a>
+
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation" hidden>
+      <a href="index.html">Home</a>
+      <a href="index.html#sourcing">Sourcing</a>
+      <a href="index.html#recently-sourced">Recently Sourced</a>
+      <a href="enquire.html">Contact</a>
+      <a class="mobile-enquire" href="#enquiry-form">Enquire</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="enquiry-hero">
+      <div class="shell enquiry-layout">
+        <div class="enquiry-intro">
+          <p class="eyebrow">Alleyne Automotive</p>
+          <h1>Make an enquiry</h1>
+          <p class="enquiry-lead">Tell us what you’re looking for and we’ll source it for you.</p>
+
+          <div class="process-list" aria-label="How it works">
+            <div><span class="line-icon search-icon" aria-hidden="true"></span><strong>Find</strong></div>
+            <div><span class="line-icon car-icon" aria-hidden="true"></span><strong>Source</strong></div>
+            <div><span class="line-icon truck-icon" aria-hidden="true"></span><strong>Deliver</strong></div>
+          </div>
+        </div>
+
+        <div class="form-card" id="enquiry-form">
+          <form novalidate>
+            <div class="form-row two-column">
+              <label>
+                <span>Full name</span>
+                <input type="text" name="name" autocomplete="name" placeholder="Full Name*" required>
+              </label>
+              <label>
+                <span>Phone number</span>
+                <input type="tel" name="phone" autocomplete="tel" placeholder="Phone Number*" required>
+              </label>
+            </div>
+
+            <label>
+              <span>Email address</span>
+              <input type="email" name="email" autocomplete="email" placeholder="Email Address*" required>
+            </label>
+
+            <label>
+              <span>Preferred vehicle</span>
+              <input type="text" name="vehicle" placeholder="Preferred Vehicle (Make & Model)*" required>
+            </label>
+
+            <div class="form-row two-column">
+              <label>
+                <span>Budget</span>
+                <select name="budget">
+                  <option value="">Budget</option>
+                  <option>Under €10,000</option>
+                  <option>€10,000–€20,000</option>
+                  <option>€20,000–€35,000</option>
+                  <option>€35,000–€50,000</option>
+                  <option>€50,000+</option>
+                </select>
+              </label>
+
+              <label>
+                <span>Year</span>
+                <select name="year">
+                  <option value="">Year (Optional)</option>
+                  <option>2024 or newer</option>
+                  <option>2020 or newer</option>
+                  <option>2015 or newer</option>
+                  <option>No preference</option>
+                </select>
+              </label>
+            </div>
+
+            <label>
+              <span>Additional details</span>
+              <textarea name="details" rows="6" placeholder="Additional Details (Specification, Colour, etc.)"></textarea>
+            </label>
+
+            <button class="gold-button form-submit" type="submit">Submit enquiry <span aria-hidden="true">→</span></button>
+            <p class="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
