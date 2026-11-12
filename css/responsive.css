@@ -5,7 +5,7 @@
   .desktop-nav a { font-size: 11px; }
   .hero { min-height: 610px; }
   .hero-inner { min-height: 610px; grid-template-columns: 51% 49%; }
-  .hero-visual { width: 61%; right: -7%; }
+  .hero-visual { width: 58%; right: 0; }
   .hero h1 { font-size: 60px; }
   .enquiry-layout { grid-template-columns: 1fr; gap: 38px; padding-top: 56px; }
   .form-card { justify-self: stretch; width: 100%; }
@@ -29,19 +29,23 @@
   .hero h1 { max-width: 6.5ch; font-size: clamp(54px, 12vw, 78px); }
   .hero-subtitle { margin: 24px 0 35px; }
   .hero-visual {
-    top: 310px;
-    right: -15%;
-    width: 115%;
+    top: 300px;
+    right: -12%;
+    width: 112%;
     height: 470px;
     align-items: end;
   }
-  .hero-visual img { object-fit: cover; object-position: 55% center; }
+  .hero-visual img {
+    width: min(760px, 100%);
+    object-fit: contain;
+    object-position: right bottom;
+  }
   .gold-button { min-height: 56px; }
   .trust-grid { grid-template-columns: 1fr; }
   .trust-grid article { justify-content: flex-start; border-right: 0; border-bottom: 1px solid var(--border); }
   .trust-grid article:last-child { border-bottom: 0; }
   .recent-grid { grid-template-columns: 1fr; }
-  .recent-card { min-height: 340px; }
+  .recent-card { min-height: 230px; }
   .footer-inner { grid-template-columns: 1fr; padding: 30px 0; gap: 14px; }
   .enquiry-layout { padding-top: 44px; padding-bottom: 44px; }
   .enquiry-intro h1 { font-size: clamp(50px, 12vw, 70px); }
@@ -58,11 +62,10 @@
   .hero h1 { font-size: 50px; }
   .hero-subtitle { font-size: 14px; letter-spacing: .23em; }
   .gold-button { width: 100%; max-width: 340px; padding: 0 24px; }
-  .hero-visual { top: 330px; right: -40%; width: 154%; height: 380px; }
-  .scroll-cue { bottom: 18px; }
+  .hero-visual { top: 325px; right: -42%; width: 150%; height: 390px; }
   .recent-section { padding: 62px 0 72px; }
   .section-heading { align-items: start; flex-direction: column; gap: 16px; }
-  .recent-card { min-height: 285px; }
+  .recent-card { min-height: 210px; }
   .enquiry-hero::before { left: -30%; width: 120%; height: 24%; opacity: .34; }
   .enquiry-layout { gap: 28px; }
   .enquiry-lead { margin: 20px 0 28px; font-size: 13px; }

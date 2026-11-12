@@ -220,55 +220,29 @@ button { color: inherit; }
   position: absolute;
   z-index: 2;
   top: 0;
-  right: -2.5%;
-  width: 66%;
+  right: 0;
+  width: 62%;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  overflow: hidden;
 }
-.hero-visual img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: 50% center;
-}
-.scroll-cue {
-  position: absolute;
-  z-index: 7;
-  left: 50%;
-  bottom: 27px;
-  transform: translateX(-50%);
-  display: grid;
-  justify-items: center;
-  gap: 7px;
-}
-.mouse-icon {
-  width: 20px;
-  height: 32px;
-  border: 2px solid rgba(255,255,255,.9);
-  border-radius: 12px;
-  position: relative;
-}
-.mouse-icon::after {
+.hero-visual::before {
   content: "";
   position: absolute;
-  top: 5px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 3px;
-  height: 7px;
-  border-radius: 2px;
-  background: rgba(255,255,255,.86);
+  inset: 0;
+  background: linear-gradient(90deg, #050505 0%, rgba(5,5,5,.42) 14%, rgba(5,5,5,0) 38%);
+  z-index: 2;
+  pointer-events: none;
 }
-.chevron {
-  width: 10px;
-  height: 10px;
-  border-right: 2px solid var(--gold);
-  border-bottom: 2px solid var(--gold);
-  transform: rotate(45deg);
+.hero-visual img {
+  width: min(820px, 100%);
+  height: auto;
+  max-height: 100%;
+  object-fit: contain;
+  object-position: right center;
 }
-
 .trust-strip {
   background: #080808;
   border-bottom: 1px solid var(--border);
@@ -346,22 +320,24 @@ button { color: inherit; }
   border-bottom: 0;
   border-radius: 12px 12px 0 0;
 }
-.truck-icon::before {
+.check-icon::before {
   content: "";
   position: absolute;
-  left: 1px;
-  top: 12px;
-  width: 22px;
-  height: 17px;
+  width: 28px;
+  height: 28px;
+  left: 5px;
+  top: 5px;
   border: 2px solid currentColor;
+  border-radius: 50%;
 }
-.truck-icon::after {
+.check-icon::after {
   content: "";
   position: absolute;
-  right: 1px;
-  top: 17px;
   width: 13px;
-  height: 12px;
-  border: 2px solid currentColor;
-  border-left: 0;
+  height: 7px;
+  left: 13px;
+  top: 14px;
+  border-left: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(-45deg);
 }
