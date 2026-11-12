@@ -44,7 +44,7 @@ button { color: inherit; }
   align-items: center;
   gap: 28px;
 }
-.brand { width: 280px; }
+.brand { width: 292px; }
 .brand img { width: 100%; height: auto; }
 .desktop-nav {
   justify-self: center;
@@ -231,7 +231,7 @@ button { color: inherit; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 52% center;
+  object-position: 50% center;
 }
 .scroll-cue {
   position: absolute;

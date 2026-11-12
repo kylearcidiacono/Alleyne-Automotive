@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 160" role="img" aria-labelledby="title desc">
+  <title id="title">Alleyne Automotive</title>
+  <desc id="desc">Gold AA monogram with Alleyne Automotive wordmark</desc>
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff1b3"/>
+      <stop offset="0.28" stop-color="#e6bd59"/>
+      <stop offset="0.58" stop-color="#b57a14"/>
+      <stop offset="0.82" stop-color="#f0cf72"/>
+      <stop offset="1" stop-color="#8b5c08"/>
+    </linearGradient>
+    <linearGradient id="silver" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#c9c9c9"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(10 14)">
+    <path fill="url(#gold)" fill-rule="evenodd" d="M70 3 L131 126 L103 126 L90 98 L48 98 L34 126 L5 126 L67 3 Z M59 75 H80 L69 51 Z"/>
+    <path fill="url(#gold)" fill-rule="evenodd" d="M110 18 L162 126 L137 126 L126 101 L91 101 L79 126 L53 126 L107 18 Z M100 81 H118 L109 60 Z" opacity="0.92"/>
+    <path d="M50 129 L154 2 L164 2 L61 129 Z" fill="url(#silver)"/>
+  </g>
+  <line x1="196" y1="24" x2="196" y2="134" stroke="#6c6c6c" stroke-width="1"/>
+  <text x="224" y="73" fill="#f7f7f7" font-family="Arial, Helvetica, sans-serif" font-size="48" font-style="italic" font-weight="700" letter-spacing="13">ALLEYNE</text>
+  <text x="228" y="118" fill="#d9d1be" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" letter-spacing="12">AUTOMOTIVE</text>
+</svg>

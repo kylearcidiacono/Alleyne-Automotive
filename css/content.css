@@ -37,14 +37,24 @@
   overflow: hidden;
   border: 1px solid var(--border);
   background-color: #101010;
-  background-image:
-    linear-gradient(180deg, rgba(0,0,0,.08), rgba(0,0,0,.85)),
-    url("../assets/hero-car.webp");
   background-size: cover;
+  background-position: center;
 }
-.recent-card-one { background-position: 26% center; }
-.recent-card-two { background-position: 62% center; }
-.recent-card-three { background-position: 94% center; }
+.recent-card-one {
+  background-image:
+    linear-gradient(180deg, rgba(0,0,0,.04), rgba(0,0,0,.84)),
+    url("https://images.unsplash.com/photo-1694026015216-d474894705a2?auto=format&fit=crop&w=1400&q=84");
+}
+.recent-card-two {
+  background-image:
+    linear-gradient(180deg, rgba(0,0,0,.04), rgba(0,0,0,.84)),
+    url("https://images.unsplash.com/photo-1769641241103-5010ba9d7627?auto=format&fit=crop&w=1400&q=84");
+}
+.recent-card-three {
+  background-image:
+    linear-gradient(180deg, rgba(0,0,0,.04), rgba(0,0,0,.84)),
+    url("https://images.unsplash.com/photo-1765171103239-b4ce1f941910?auto=format&fit=crop&w=1400&q=84");
+}
 .recent-copy { padding: 22px; }
 .recent-copy span {
   display: block;
@@ -90,7 +100,7 @@
   background:
     linear-gradient(90deg, rgba(0,0,0,0), rgba(0,0,0,.34) 72%, #060606 100%),
     linear-gradient(180deg, rgba(0,0,0,.08), #060606 94%),
-    url("../assets/enquiry-car.webp") left bottom / cover no-repeat;
+    url("https://images.unsplash.com/photo-1756443773551-ddcc180f58ad?auto=format&fit=crop&w=1800&q=86") left bottom / cover no-repeat;
   opacity: .92;
 }
 .enquiry-layout {
