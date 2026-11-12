@@ -4,21 +4,17 @@ Production website build for Alleyne Automotive.
 
 ## Current design
 
-- Black / champagne-gold premium automotive direction
-- Customer's official AA/car logo artwork preserved and recoloured gold
-- Full-width black BMW garage hero
-- Live HTML text/navigation/buttons over the hero
-- Sourcing process strip
+- Customer's official AA/car logo artwork preserved
+- Official-logo favicon
+- Full-width generated black BMW hero in a dark gold-lit garage
+- No artificial dark panel or gradient behind the homepage hero copy
+- Vehicle sourcing process: Find → Source → You choose
 - "From your first car to your dream car" positioning
-- First car / next car / dream car visual cards
+- Generated Fiat 500 / Golf Mk8 / Audi RS6 category imagery
 - Dedicated responsive enquiry page
 - Mobile navigation
 - No headlight or windscreen animations yet
 
 ## Deployment
 
-This commit only changes the GitHub repository. No Cloudflare deployment action is performed by ChatGPT.
-
-## Image credits
-
-The BMW photography currently used for the build is sourced from Unsplash and marked free to use under the Unsplash License. Replace with owned Alleyne photography later if desired.
+This commit changes the GitHub repository only. No Cloudflare deployment action is performed by ChatGPT.
