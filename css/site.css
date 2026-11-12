@@ -18,9 +18,9 @@ button,input,select,textarea{font:inherit}
 .shell{width:min(var(--shell),calc(100% - 64px));margin:0 auto}
 
 .site-header{position:relative;z-index:20;background:#050505;border-bottom:1px solid var(--line)}
-.header-inner{min-height:102px;display:grid;grid-template-columns:430px 1fr auto;align-items:center;gap:28px}
+.header-inner{min-height:102px;display:grid;grid-template-columns:455px 1fr auto;align-items:center;gap:28px}
 .brand{display:inline-flex;align-items:center;width:fit-content}
-.brand-mark{width:86px;height:86px;object-fit:contain}
+.brand-mark{width:112px;height:auto;max-height:74px;object-fit:contain;object-position:center}
 .brand-divider{width:1px;height:52px;margin:0 22px;background:linear-gradient(180deg,var(--gold-light),var(--gold-dark))}
 .brand-wordmark{display:grid;gap:5px;line-height:1}
 .brand-wordmark strong{font-size:28px;letter-spacing:.22em;font-style:italic;font-weight:700}
@@ -36,7 +36,7 @@ button,input,select,textarea{font:inherit}
 .mobile-menu a{display:block;padding:14px 6px;border-bottom:1px solid rgba(255,255,255,.07);text-transform:uppercase;font-size:13px;letter-spacing:.06em}
 .mobile-enquire{color:var(--gold-light)}
 
-.hero{min-height:610px;position:relative;overflow:hidden;border-bottom:1px solid var(--line);background-image:url("../assets/hero-bmw.webp");background-size:cover;background-position:center center;background-repeat:no-repeat}
+.hero{min-height:610px;position:relative;overflow:hidden;border-bottom:1px solid var(--line);background-image:url("../assets/hero-bmw.png");background-size:cover;background-position:center center;background-repeat:no-repeat}
 .hero-inner{min-height:610px;display:flex;align-items:center}
 .hero-copy{width:min(700px,52%);padding-bottom:8px}
 .eyebrow,.section-kicker{margin:0 0 24px;display:flex;align-items:center;gap:18px;text-transform:uppercase;letter-spacing:.22em;font-size:14px;color:#ece8e0}
@@ -61,9 +61,9 @@ button,input,select,textarea{font:inherit}
 .source-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 .source-card{min-height:260px;position:relative;overflow:hidden;display:flex;align-items:flex-end;border:1px solid rgba(255,255,255,.20);background-color:#111;background-position:center;background-size:cover}
 .source-card::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.02) 30%,rgba(0,0,0,.82) 100%)}
-.source-card-first{background-image:url("../assets/first-fiat500.webp")}
-.source-card-next{background-image:url("../assets/next-golf-mk8.webp")}
-.source-card-dream{background-image:url("../assets/dream-audi-rs6.webp")}
+.source-card-first{background-image:url("../assets/first-fiat500.png")}
+.source-card-next{background-image:url("../assets/next-golf-mk8.png")}
+.source-card-dream{background-image:url("../assets/dream-audi-rs6.png")}
 .source-card-copy{position:relative;z-index:2;padding:22px 24px}
 .source-card-copy strong{display:block;margin-bottom:6px;color:#f3c239;text-transform:uppercase;font-size:18px}
 .source-card-copy p{margin:0;font-size:16px}
@@ -76,7 +76,7 @@ button,input,select,textarea{font:inherit}
 .footer-inner>a{color:var(--gold-light);text-transform:uppercase;font-size:13px}
 
 .enquiry-main{min-height:calc(100vh - 103px)}
-.enquiry-section{min-height:calc(100vh - 103px);position:relative;background-image:url("../assets/hero-bmw.webp");background-size:cover;background-position:center}
+.enquiry-section{min-height:calc(100vh - 103px);position:relative;background-image:url("../assets/hero-bmw.png");background-size:cover;background-position:center}
 .enquiry-section::before{content:"";position:absolute;inset:0;background:rgba(5,5,5,.62)}
 .enquiry-layout{position:relative;z-index:1;min-height:calc(100vh - 103px);padding:62px 0;display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(50px,7vw,110px);align-items:center}
 .enquiry-copy h1{margin:0;max-width:9ch;font-size:clamp(52px,5vw,78px);line-height:.96;text-transform:uppercase;font-weight:500}
@@ -99,7 +99,7 @@ button,input,select,textarea{font:inherit}
 .header-inner{grid-template-columns:360px 1fr auto}.brand-mark{width:74px;height:74px}.brand-divider{margin:0 16px;height:48px}.brand-wordmark strong{font-size:23px}.desktop-nav{gap:24px}.hero-copy{width:58%}
 }
 @media(max-width:940px){
-.shell{width:min(var(--shell),calc(100% - 36px))}.header-inner{min-height:84px;grid-template-columns:1fr auto}.desktop-nav,.enquire-outline{display:none}.menu-button{display:block}.brand-mark{width:64px;height:64px}.brand-divider{height:42px;margin:0 13px}.brand-wordmark strong{font-size:20px}.brand-wordmark small{font-size:10px}
+.shell{width:min(var(--shell),calc(100% - 36px))}.header-inner{min-height:84px;grid-template-columns:1fr auto}.desktop-nav,.enquire-outline{display:none}.menu-button{display:block}.brand-mark{width:86px;height:auto;max-height:58px}.brand-divider{height:42px;margin:0 13px}.brand-wordmark strong{font-size:20px}.brand-wordmark small{font-size:10px}
 .hero{min-height:760px;background-size:auto 54%;background-position:72% bottom;background-color:#080808}.hero-inner{min-height:760px;align-items:flex-start;padding-top:56px}.hero-copy{width:100%;max-width:680px}
 .process-grid{grid-template-columns:1fr}.process-grid article{border-right:0;border-bottom:1px solid var(--line)}.process-grid article:last-child{border-bottom:0}
 .source-grid{grid-template-columns:1fr}.source-card{min-height:310px}
@@ -107,7 +107,7 @@ button,input,select,textarea{font:inherit}
 .enquiry-layout{grid-template-columns:1fr}.form-card{justify-self:stretch;width:100%}
 }
 @media(max-width:600px){
-.shell{width:min(var(--shell),calc(100% - 28px))}.header-inner{min-height:76px}.brand-mark{width:54px;height:54px}.brand-divider{margin:0 10px;height:38px}.brand-wordmark strong{font-size:17px;letter-spacing:.16em}.brand-wordmark small{font-size:8px;letter-spacing:.38em}
+.shell{width:min(var(--shell),calc(100% - 28px))}.header-inner{min-height:76px}.brand-mark{width:76px;height:auto;max-height:52px}.brand-divider{margin:0 10px;height:38px}.brand-wordmark strong{font-size:17px;letter-spacing:.16em}.brand-wordmark small{font-size:8px;letter-spacing:.38em}
 .hero{min-height:700px;background-size:auto 45%;background-position:68% bottom}.hero-inner{min-height:700px;padding-top:44px}.eyebrow,.section-kicker{font-size:11px;gap:12px}.eyebrow span,.section-kicker span{width:54px}.hero h1{font-size:49px}.hero-subtitle{font-size:14px;letter-spacing:.22em}.gold-button{width:100%;max-width:360px;min-height:58px;padding:0 24px}
 .process-grid article{padding:20px 12px}.source-section{padding:36px 0 44px}.source-heading h2{font-size:36px}.source-card{min-height:240px}
 .form-row.two{grid-template-columns:1fr}.form-card{padding:16px}.mini-process{max-width:none}
