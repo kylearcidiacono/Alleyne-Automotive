@@ -3,9 +3,9 @@ const mobileMenu = document.querySelector('#mobile-menu');
 
 if (menuButton && mobileMenu) {
   menuButton.addEventListener('click', () => {
-    const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
-    menuButton.setAttribute('aria-expanded', String(!isOpen));
-    mobileMenu.hidden = isOpen;
+    const open = menuButton.getAttribute('aria-expanded') === 'true';
+    menuButton.setAttribute('aria-expanded', String(!open));
+    mobileMenu.hidden = open;
   });
 
   mobileMenu.querySelectorAll('a').forEach((link) => {
@@ -22,9 +22,7 @@ const formStatus = document.querySelector('.form-status');
 if (enquiryForm && formStatus) {
   enquiryForm.addEventListener('submit', (event) => {
     event.preventDefault();
-
     if (!enquiryForm.reportValidity()) return;
-
-    formStatus.textContent = 'Enquiry form is ready. Delivery will be connected before launch.';
+    formStatus.textContent = 'Form layout complete. Enquiry delivery will be connected before launch.';
   });
 }

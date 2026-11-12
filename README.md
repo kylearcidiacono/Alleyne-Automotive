@@ -2,21 +2,23 @@
 
 Production website build for Alleyne Automotive.
 
-## Current scope
+## Current design
 
-- Responsive black / metallic-gold design based on the approved concept
-- True SVG logo and SVG favicon
-- Homepage hero: "Vehicle Sourcing" / "Any make. Any model."
-- Clear sourcing process: Tell us → We source → You choose
-- "From your first car to your dream car" positioning section
-- Dedicated enquiry page with responsive form
+- Black / champagne-gold premium automotive direction
+- Customer's official AA/car logo artwork preserved and recoloured gold
+- Full-width black BMW garage hero
+- Live HTML text/navigation/buttons over the hero
+- Sourcing process strip
+- "From your first car to your dream car" positioning
+- First car / next car / dream car visual cards
+- Dedicated responsive enquiry page
 - Mobile navigation
-- Static, dependency-free HTML/CSS/JS
+- No headlight or windscreen animations yet
 
-## Intentionally not included yet
+## Deployment
 
-- Headlight or windscreen animations
-- Live enquiry delivery / email integration
-- Production contact details
+This commit only changes the GitHub repository. No Cloudflare deployment action is performed by ChatGPT.
 
-No deployment changes are made by ChatGPT from this repository update.
+## Image credits
+
+The BMW photography currently used for the build is sourced from Unsplash and marked free to use under the Unsplash License. Replace with owned Alleyne photography later if desired.

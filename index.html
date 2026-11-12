@@ -4,18 +4,21 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#050505">
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <meta name="description" content="Alleyne Automotive vehicle sourcing. Any make. Any model.">
+  <meta name="description" content="Alleyne Automotive vehicle sourcing. From your first car to your dream car.">
   <title>Alleyne Automotive | Vehicle Sourcing</title>
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/content.css">
-  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="icon" href="assets/alleyne-logo.png" type="image/png">
+  <link rel="stylesheet" href="css/site.css">
 </head>
 <body>
   <header class="site-header">
-    <div class="header-inner">
+    <div class="shell header-inner">
       <a class="brand" href="index.html" aria-label="Alleyne Automotive home">
-        <img src="assets/alleyne-logo.svg" alt="Alleyne Automotive">
+        <img class="brand-mark" src="assets/alleyne-logo.png" alt="">
+        <span class="brand-divider" aria-hidden="true"></span>
+        <span class="brand-wordmark">
+          <strong>ALLEYNE</strong>
+          <small>AUTOMOTIVE</small>
+        </span>
       </a>
 
       <nav class="desktop-nav" aria-label="Primary navigation">
@@ -25,8 +28,8 @@
         <a href="enquire.html">Contact</a>
       </nav>
 
-      <a class="header-enquire" href="enquire.html" aria-label="Make an enquiry">
-        <span class="whatsapp-mark" aria-hidden="true">◔</span>
+      <a class="enquire-outline" href="enquire.html">
+        <span class="chat-dot" aria-hidden="true">◔</span>
         Enquire
       </a>
 
@@ -45,58 +48,64 @@
   </header>
 
   <main>
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-inner shell">
+    <section class="hero">
+      <div class="hero-photo" aria-hidden="true"></div>
+      <div class="hero-shade" aria-hidden="true"></div>
+
+      <div class="shell hero-inner">
         <div class="hero-copy">
-          <p class="eyebrow">Alleyne Automotive</p>
-          <h1 id="hero-title">Vehicle Sourcing</h1>
+          <p class="eyebrow">Alleyne Automotive <span></span></p>
+          <h1>Vehicle Sourcing</h1>
           <p class="hero-subtitle">Any make. Any model.</p>
           <a class="gold-button" href="enquire.html">Make an enquiry <span aria-hidden="true">→</span></a>
         </div>
-
-        <div class="hero-visual" aria-hidden="true">
-          <img src="assets/hero-car.webp" alt="">
-        </div>
       </div>
-
     </section>
 
-    <section class="trust-strip" id="sourcing" aria-label="Sourcing process">
-      <div class="shell trust-grid">
+    <section class="process-strip" id="sourcing" aria-label="How vehicle sourcing works">
+      <div class="shell process-grid">
         <article>
-          <span class="line-icon search-icon" aria-hidden="true"></span>
-          <div><strong>Tell us</strong><small>Make, model, budget and preferences.</small></div>
+          <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="20" cy="20" r="12"></circle><path d="M29 29l12 12"></path></svg>
+          <div><strong>Find</strong><p>Tell us exactly what you're looking for.</p></div>
         </article>
         <article>
-          <span class="line-icon car-icon" aria-hidden="true"></span>
-          <div><strong>We source</strong><small>We search UK options around your brief.</small></div>
+          <svg viewBox="0 0 58 42" aria-hidden="true"><path d="M9 28h40l-4-11-9-5H22l-9 5-4 11Z"></path><circle cx="17" cy="30" r="5"></circle><circle cx="41" cy="30" r="5"></circle></svg>
+          <div><strong>Source</strong><p>We search the market for the right vehicle.</p></div>
         </article>
         <article>
-          <span class="line-icon check-icon" aria-hidden="true"></span>
-          <div><strong>You choose</strong><small>Review the options and decide what fits.</small></div>
+          <svg viewBox="0 0 56 44" aria-hidden="true"><path d="M5 13h29v22H5z"></path><path d="M34 20h10l7 7v8H34"></path><circle cx="15" cy="36" r="4"></circle><circle cx="42" cy="36" r="4"></circle></svg>
+          <div><strong>Deliver</strong><p>A clear and simple handover.</p></div>
         </article>
       </div>
     </section>
 
-    <section class="recent-section" id="what-we-source">
+    <section class="source-section" id="what-we-source">
       <div class="shell">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">What we source</p>
-            <h2>From your first car to your dream car.</h2>
-          </div>
-          <a href="enquire.html">Tell us what you want <span aria-hidden="true">→</span></a>
+        <div class="source-heading">
+          <p class="section-kicker">What we source <span></span></p>
+          <h2>From your first car to your dream car.</h2>
         </div>
 
-        <div class="recent-grid">
-          <article class="recent-card recent-card-one">
-            <div class="recent-copy"><span>First car</span><strong>Start with the right car</strong></div>
+        <div class="source-grid">
+          <article class="source-card source-card-first">
+            <div class="source-card-copy">
+              <strong>First car</strong>
+              <p>A reliable start, sourced for you.</p>
+            </div>
           </article>
-          <article class="recent-card recent-card-two">
-            <div class="recent-copy"><span>Your next car</span><strong>Sourced to your brief</strong></div>
+
+          <article class="source-card source-card-next">
+            <div class="source-card-copy">
+              <strong>Your next car</strong>
+              <p>Upgrade with confidence.</p>
+            </div>
           </article>
-          <article class="recent-card recent-card-three">
-            <div class="recent-copy"><span>Dream car</span><strong>Find the exact one</strong></div>
+
+          <article class="source-card source-card-dream">
+            <div class="source-card-copy">
+              <strong>Dream car</strong>
+              <p>Find the exact one you want.</p>
+            </div>
           </article>
         </div>
       </div>
@@ -105,7 +114,10 @@
 
   <footer class="site-footer">
     <div class="shell footer-inner">
-      <img src="assets/alleyne-logo.svg" alt="Alleyne Automotive">
+      <div class="footer-brand">
+        <img src="assets/alleyne-logo.png" alt="">
+        <span>Alleyne Automotive</span>
+      </div>
       <p>Vehicle sourcing tailored to your requirements.</p>
       <a href="enquire.html">Make an enquiry</a>
     </div>
