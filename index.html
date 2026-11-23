@@ -1,127 +1,152 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-GB">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#050505">
-  <meta name="description" content="Alleyne Automotive vehicle sourcing. From your first car to your dream car.">
-  <title>Alleyne Automotive | Vehicle Sourcing</title>
-  <link rel="icon" type="image/png" sizes="128x128" href="assets/favicon-v4.png?v=4">
-  <link rel="shortcut icon" href="assets/favicon-v4.png?v=4">
-  <link rel="apple-touch-icon" href="assets/favicon-v4.png?v=4">
-  <link rel="stylesheet" href="css/site.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#ffffff">
+<link rel="preload" href="fonts/geist-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/geist-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<title>Alleyne Automotive | BMW, Audi and Volkswagen, sourced and sold</title>
+<meta name="description" content="Independent UK dealer for BMW, Audi and Volkswagen cars. Vehicle sourcing, buying and selling, and part exchange. Viewings by appointment.">
+<link rel="icon" type="image/png" href="media/logo.png">
+<link rel="stylesheet" href="styles.css">
+<script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
-  <header class="site-header">
-    <div class="shell header-inner">
-      <a class="brand" href="index.html" aria-label="Alleyne Automotive home">
-        <img class="brand-mark" src="assets/brand-mark.webp" alt="Alleyne Automotive">
-        <span class="brand-divider" aria-hidden="true"></span>
-        <span class="brand-wordmark">
-          <strong>ALLEYNE</strong>
-          <small>AUTOMOTIVE</small>
-        </span>
-      </a>
+<a class="skip" href="#top">Skip to content</a>
 
-      <nav class="desktop-nav" aria-label="Primary navigation">
-        <a class="active" href="index.html">Home</a>
-        <a href="#sourcing">Sourcing</a>
-        <a href="#what-we-source">What We Source</a>
-        <a href="enquire.html">Contact</a>
-      </nav>
+<header class="nav">
+  <a class="brand" href="index.html">
+    <img src="media/logo.png" alt="" width="44" height="44">
+    <span>Alleyne <em>Automotive</em></span>
+  </a>
+  <button class="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
+  <nav id="menu" aria-label="Main">
+    <a href="sourcing.html" style="--i:1">Sourcing</a>
+    <a href="buy-and-sell.html" style="--i:2">Buy and sell</a>
+    <a href="part-exchange.html" style="--i:3">Part exchange</a>
+    <a href="brands.html" style="--i:4">Brands</a>
+    <a href="viewings-and-delivery.html" style="--i:5">Viewings</a>
+    <a class="cta" href="contact.html" style="--i:6">Enquire</a>
+  </nav>
+</header>
 
-      <a class="enquire-outline" href="enquire.html">
-        <span class="enquire-icon" aria-hidden="true">◔</span>
-        Enquire
-      </a>
-
-      <button class="menu-button" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open navigation">
-        <span></span><span></span><span></span>
-      </button>
+<main id="top">
+<section class="hero">
+  <video autoplay muted loop playsinline preload="auto" poster="media/poster.jpg" aria-hidden="true"><source src="media/hero.mp4" type="video/mp4"></video>
+  <div class="hero-text">
+    <h1>From your first car to your dream car.</h1>
+    
+    <a class="btn" href="contact.html"><span>Enquire</span><i aria-hidden="true">&#8599;</i></a>
+  </div>
+  <p class="hero-note">Independent dealer, not affiliated with BMW, Audi, Volkswagen or any other manufacturer. Images are for illustration only.</p>
+</section>
+<section class="stage">
+  <video autoplay muted loop playsinline preload="metadata" poster="media/audi-a3-poster.jpg" aria-hidden="true"><source src="media/audi-a3.mp4" type="video/mp4"></video>
+  <div class="stage-inner">
+    <h2>Wherever you are on the road.</h2>
+    <div class="journey">
+      <a href="contact.html"><h3>Your first car</h3><p>Tell us your budget and what you need it for. We look for a sensible match.</p></a>
+      <a href="part-exchange.html"><h3>Your next car</h3><p>Moving up, or moving on? Put your current car towards it in part exchange.</p></a>
+      <a href="sourcing.html"><h3>Your dream car</h3><p>Have a particular car in mind? We search for it and report back.</p></a>
     </div>
+  </div>
+</section>
 
-    <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation" hidden>
-      <a href="index.html">Home</a>
-      <a href="#sourcing">Sourcing</a>
-      <a href="#what-we-source">What We Source</a>
-      <a href="enquire.html">Contact</a>
-      <a class="mobile-enquire" href="enquire.html">Enquire</a>
-    </nav>
-  </header>
-
-  <main>
-    <section class="hero">
-      <div class="shell hero-inner">
-        <div class="hero-copy">
-          <p class="eyebrow">Alleyne Automotive <span></span></p>
-          <h1>Vehicle Sourcing</h1>
-          <p class="hero-subtitle">Any make. Any model.</p>
-          <a class="gold-button" href="enquire.html">Make an enquiry <span aria-hidden="true">→</span></a>
-        </div>
-      </div>
-    </section>
-
-    <section class="process-strip" id="sourcing" aria-label="How vehicle sourcing works">
-      <div class="shell process-grid">
-        <article>
-          <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="19" cy="19" r="11"></circle><path d="M27 27l13 13"></path></svg>
-          <div><strong>Find</strong><p>Tell us exactly what you're looking for.</p></div>
-        </article>
-        <article>
-          <svg viewBox="0 0 58 42" aria-hidden="true"><path d="M9 28h40l-4-11-9-5H22l-9 5-4 11Z"></path><circle cx="17" cy="30" r="5"></circle><circle cx="41" cy="30" r="5"></circle></svg>
-          <div><strong>Source</strong><p>We search UK options around your brief.</p></div>
-        </article>
-        <article>
-          <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="17"></circle><path d="m15 24 6 6 12-13"></path></svg>
-          <div><strong>You choose</strong><p>Review the options and choose what fits.</p></div>
-        </article>
-      </div>
-    </section>
-
-    <section class="source-section" id="what-we-source">
-      <div class="shell">
-        <div class="source-heading">
-          <p class="section-kicker">What we source <span></span></p>
-          <h2>From your first car to your dream car.</h2>
-        </div>
-
-        <div class="source-grid">
-          <article class="source-card source-card-first">
-            <div class="source-card-copy">
-              <strong>First car</strong>
-              <p>Fiat 500 — a reliable place to start.</p>
-            </div>
-          </article>
-
-          <article class="source-card source-card-next">
-            <div class="source-card-copy">
-              <strong>Your next car</strong>
-              <p>Golf Mk8 — upgrade to the right car.</p>
-            </div>
-          </article>
-
-          <article class="source-card source-card-dream">
-            <div class="source-card-copy">
-              <strong>Dream car</strong>
-              <p>Audi RS6 — find the exact one you want.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="shell footer-inner">
-      <div class="footer-brand">
-        <img src="assets/brand-mark.webp" alt="Alleyne Automotive">
-        <span>Alleyne Automotive</span>
-      </div>
-      <p>Vehicle sourcing tailored to your requirements.</p>
-      <a href="enquire.html">Make an enquiry</a>
+<section class="block">
+  <h2>What we do</h2>
+  <div class="tabs">
+    <div class="tab-view" aria-hidden="true">
+      <video class="on" autoplay muted loop playsinline preload="none" poster="media/m4-front.jpg"><source src="media/m4-front.mp4" type="video/mp4"></video>
+      <video autoplay muted loop playsinline preload="none" poster="media/r8-lift.jpg"><source src="media/r8-lift.mp4" type="video/mp4"></video>
+      <video autoplay muted loop playsinline preload="none" poster="media/m4-detail.jpg"><source src="media/m4-detail.mp4" type="video/mp4"></video>
     </div>
-  </footer>
+    <div class="tab-list">
+      <a class="tab-item on" href="sourcing.html">
+        <img class="item-img" src="media/still-m4.jpg" alt="" loading="lazy">
+        <h3>Vehicle sourcing</h3>
+        <div class="tab-body"><div><p>Tell us the model, specification and budget. We search for a suitable car and report back.</p><span class="more">Explore &rarr;</span></div></div>
+      </a>
+      <a class="tab-item" href="buy-and-sell.html">
+        <img class="item-img" src="media/r8-lift.jpg" alt="" loading="lazy">
+        <h3>Buy and sell</h3>
+        <div class="tab-body"><div><p>Buy a car from us, or tell us about the one you want to sell.</p><span class="more">Explore &rarr;</span></div></div>
+      </a>
+      <a class="tab-item" href="part-exchange.html">
+        <img class="item-img" src="media/m4-detail.jpg" alt="" loading="lazy">
+        <h3>Part exchange</h3>
+        <div class="tab-body"><div><p>Put your current car towards your next one.</p><span class="more">Explore &rarr;</span></div></div>
+      </a>
+    </div>
+  </div>
+</section>
 
-  <script src="script.js"></script>
+<section class="block dark">
+  <h2>The cars we deal in</h2>
+  <div class="brand-tiles">
+    <a class="tile reveal" href="brands.html#bmw"><video autoplay muted loop playsinline preload="none" poster="media/bmw-pov.jpg" aria-hidden="true"><source src="media/bmw-pov.mp4" type="video/mp4"></video><div class="tile-body"><h3>BMW</h3><span class="more">Explore &rarr;</span></div></a>
+    <a class="tile reveal" href="brands.html#audi"><video autoplay muted loop playsinline preload="none" poster="media/audi-tunnel.jpg" aria-hidden="true"><source src="media/audi-tunnel.mp4" type="video/mp4"></video><div class="tile-body"><h3>Audi</h3><span class="more">Explore &rarr;</span></div></a>
+    <a class="tile reveal" href="brands.html#volkswagen"><video autoplay muted loop playsinline preload="none" poster="media/vw-pov.jpg" aria-hidden="true"><source src="media/vw-pov.mp4" type="video/mp4"></video><div class="tile-body"><h3>Volkswagen</h3><span class="more">Explore &rarr;</span></div></a>
+  </div>
+  <p class="small">Brand names describe the vehicles we deal in. We are an independent dealer with no connection to the manufacturers.</p>
+</section>
+
+<section class="block">
+  <h2>How it works</h2>
+  <ol class="steps">
+  <li class="reveal"><span>1</span><h3>Enquire</h3><p>Call, email or message us on WhatsApp with what you are looking for.</p></li>
+  <li class="reveal"><span>2</span><h3>Arrange a viewing</h3><p>Viewings are by appointment only. We give you the viewing address when we confirm the booking.</p></li>
+  <li class="reveal"><span>3</span><h3>Collect or have it delivered</h3><p>Collect the car yourself or ask about delivery anywhere in the UK.</p></li>
+</ol>
+</section>
+
+<section class="block dark band">
+  <h2>Tell us what you are looking for.</h2>
+  <p>Send us the make, model and budget, or the details of the car you would like to sell.</p>
+  <a class="btn" href="contact.html"><span>Enquire</span><i aria-hidden="true">&#8599;</i></a>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="foot-top">
+    <div class="foot-brand">
+      <img src="media/logo.png" alt="Alleyne Automotive" width="88" height="88" loading="lazy">
+    </div>
+    <div>
+      <h2>Services</h2>
+      <ul>
+        <li><a href="sourcing.html">Vehicle sourcing</a></li>
+        <li><a href="buy-and-sell.html">Buy and sell</a></li>
+        <li><a href="part-exchange.html">Part exchange</a></li>
+        <li><a href="brands.html">BMW, Audi and Volkswagen</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Visit and deliver</h2>
+      <ul>
+        <li><a href="viewings-and-delivery.html">Viewings and delivery</a></li>
+        <li><a href="faq.html">Questions</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Legal</h2>
+      <ul>
+        <li><a href="legal-notice.html">Legal notice</a></li>
+        <li><a href="terms.html">Terms of use</a></li>
+        <li><a href="privacy.html">Privacy notice</a></li>
+        <li><a href="cookies.html">Cookies</a></li>
+        <li><a href="complaints.html">Complaints</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <p><strong>Alleyne Automotive Ltd</strong>. Registered in England and Wales, company number 17513152. Registered office: 66 Paul Street, London, EC2A 4NA.</p>
+    <p>Alleyne Automotive Ltd is an independent dealer. We are not affiliated with, authorised by or endorsed by BMW, Audi, Volkswagen Group or any other manufacturer. Brand names are used only to describe the vehicles we deal in.</p>
+  </div>
+</footer>
+
+<script src="main.js"></script>
 </body>
 </html>
