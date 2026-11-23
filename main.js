@@ -8,6 +8,7 @@ function setMenu(open) {
   btn.setAttribute('aria-expanded', open);
 }
 btn.addEventListener('click', () => setMenu(!menu.classList.contains('open')));
+document.documentElement.classList.add('menu-ready');
 menu.addEventListener('click', e => {
   if (e.target.tagName === 'A') setMenu(false);
 });
@@ -62,3 +63,34 @@ const io = new IntersectionObserver(entries => {
   });
 }, { threshold: 0.15 });
 document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+
+const form = document.getElementById('enquiry-form');
+if (form) {
+  const status = document.getElementById('form-status');
+  const button = form.querySelector('button[type="submit"]');
+  let widget;
+  const unavailable = () => { status.textContent = 'The form is currently unavailable. Please call, email or use WhatsApp above.'; button.disabled = true; };
+  fetch('/api/enquiry/config').then(r => r.ok ? r.json() : Promise.reject()).then(config => {
+    if (!config.siteKey) return unavailable();
+    const script = document.createElement('script');
+    script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';
+    script.onload = () => { widget = window.turnstile.render('#turnstile', { sitekey: config.siteKey }); };
+    script.onerror = unavailable;
+    document.head.append(script);
+  }).catch(unavailable);
+  form.addEventListener('submit', async event => {
+    event.preventDefault();
+    const token = widget !== undefined && window.turnstile.getResponse(widget);
+    if (!token) { status.textContent = 'Please complete the spam protection check before sending.'; return; }
+    button.disabled = true;
+    status.textContent = 'Sending your enquiry?';
+    try {
+      const response = await fetch(form.action, { method: 'POST', body: new FormData(form) });
+      if (!response.ok) throw new Error('Delivery unavailable');
+      form.reset();
+      status.textContent = 'Your enquiry has been sent. Thank you.';
+    } catch { status.textContent = 'Your enquiry could not be sent. Please try again or contact us using the details above.'; }
+    finally { window.turnstile.reset(widget); button.disabled = false; }
+  });
+}

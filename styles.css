@@ -211,3 +211,23 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid cur
   .foot-top{grid-template-columns:1fr 1fr;gap:40px 24px}
   .foot-brand{grid-column:1/3}
 }
+
+/* Keep navigation available if JavaScript is disabled or fails. */
+@media (max-width:1000px){
+  html:not(.menu-ready) .nav{position:relative;height:auto;min-height:64px;display:block;padding:12px 24px;background:#fff;color:#111}
+  html:not(.menu-ready) .menu-btn{display:none}
+  html:not(.menu-ready) .nav nav{position:static;display:flex;visibility:visible;opacity:1;align-items:flex-start;padding:12px 0;gap:4px;transition:none}
+  html:not(.menu-ready) .nav nav a{font-size:1rem;opacity:1;transform:none;padding:8px 0;transition:none}
+  html:not(.menu-ready) .nav .cta{margin:4px 0;padding:8px 12px}
+}
+.enquiry-wrap{max-width:700px;margin-top:72px}
+.enquiry-wrap h2{font-size:clamp(2rem,4vw,3rem)}
+#enquiry-form{display:grid;gap:10px}
+#enquiry-form label{font-weight:500;margin-top:12px}
+#enquiry-form input,#enquiry-form textarea{width:100%;padding:12px;border:1px solid #737373;background:#fff;color:#111;font:inherit}
+#enquiry-form input:focus-visible,#enquiry-form textarea:focus-visible{outline:2px solid #111;outline-offset:2px}
+#enquiry-form .btn{justify-self:start;border:0;cursor:pointer;padding:14px 24px}
+#enquiry-form .btn:disabled{opacity:.6;cursor:wait}
+#form-status:empty{display:none}
+#form-status{margin:8px 0;color:#111}
+.contact a{display:block;max-width:100%;overflow-wrap:anywhere}

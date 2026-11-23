@@ -44,11 +44,31 @@
 </section>
 <section class="block">
   <ul class="contact">
-    <li><a href="tel:PHONE_TBC">Phone: PHONE_TBC</a></li>
-    <li><a href="https://wa.me/WHATSAPP_TBC">WhatsApp: WHATSAPP_TBC</a></li>
-    <li><a href="mailto:EMAIL_TBC">Email: EMAIL_TBC</a></li>
+    <li><a href="tel:+447497095845">Phone: +44 7497 095845</a></li>
+    <li><a href="https://wa.me/447497095845">WhatsApp: +44 7497 095845</a></li>
+    <li><a href="mailto:alleyneautomotive@gmail.com">Email: alleyneautomotive@gmail.com</a></li>
   </ul>
   <p class="small">Useful to include: the make and model, your budget or the car you are selling, and where you are in the UK. Viewings are by appointment only.</p>
+<div class="enquiry-wrap">
+    <h2>Send an enquiry</h2>
+    <p>Tell us what you need and how to contact you. Read our <a href="privacy.html">privacy notice</a>.</p>
+    <form id="enquiry-form" action="/api/enquiry" method="post">
+      <label for="name">Name <span aria-hidden="true">*</span></label>
+      <input id="name" name="name" autocomplete="name" maxlength="100" required>
+      <label for="email">Email <span aria-hidden="true">*</span></label>
+      <input id="email" name="email" type="email" autocomplete="email" maxlength="254" required>
+      <label for="phone">Phone (optional)</label>
+      <input id="phone" name="phone" type="tel" autocomplete="tel" maxlength="40">
+      <label for="vehicle">Vehicle or budget (optional)</label>
+      <input id="vehicle" name="vehicle" maxlength="200">
+      <label for="message">Your enquiry <span aria-hidden="true">*</span></label>
+      <textarea id="message" name="message" rows="6" maxlength="3000" required></textarea>
+      <div id="turnstile" aria-label="Spam protection"></div>
+      <p id="form-status" role="status" aria-live="polite"></p>
+      <button class="btn" type="submit">Send enquiry</button>
+    </form>
+    <noscript><style>#enquiry-form{display:none}</style><p>To send an enquiry, please call, email or use WhatsApp using the details above.</p></noscript>
+  </div>
 </section>
 </main>
 
