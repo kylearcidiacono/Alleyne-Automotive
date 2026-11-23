@@ -22,8 +22,8 @@ export default {
       form = await new Request(request.url, { method: 'POST', headers: { 'Content-Type': request.headers.get('Content-Type') || '' }, body: bytes }).formData();
     } catch { return json({ error: 'Invalid request' }, 400); }
     const value = key => typeof form.get(key) === 'string' ? form.get(key).trim() : '';
-    const name = value('name'), email = value('email'), phone = value('phone'), vehicle = value('vehicle'), message = value('message'), token = value('cf-turnstile-response');
-    if (!name || name.length > 100 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || email.length > 254 || phone.length > 40 || vehicle.length > 200 || !message || message.length > 3000 || !token || token.length > 2048 || /[\r\n]/.test(email)) return json({ error: 'Invalid fields' }, 400);
+    const name = value('name'), email = value('email'), phone = value('phone'), preference = value('contact_preference'), vehicle = value('vehicle'), message = value('message'), token = value('cf-turnstile-response');
+    if (!name || name.length > 100 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || email.length > 254 || phone.length > 40 || !['email', 'phone'].includes(preference) || (preference === 'phone' && !phone) || vehicle.length > 200 || !message || message.length > 3000 || !token || token.length > 2048 || /[\r\n]/.test(email)) return json({ error: 'Invalid fields' }, 400);
     try {
       const check = new URLSearchParams({ secret: env.TURNSTILE_SECRET, response: token });
       const ip = request.headers.get('CF-Connecting-IP');
@@ -33,7 +33,7 @@ export default {
       if (!verified.ok || !result.success || result.hostname !== url.hostname) return json({ error: 'Spam check failed' }, 403);
       const sent = await fetch('https://api.resend.com/emails', {
         method: 'POST', headers: { Authorization: `Bearer ${env.RESEND_API_KEY}`, 'Content-Type': 'application/json' },
-        body: JSON.stringify({ from: env.ENQUIRY_FROM, to: ['alleyneautomotive@gmail.com'], reply_to: email, subject: 'New website enquiry', text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone || 'Not provided'}\nVehicle or budget: ${vehicle || 'Not provided'}\n\nEnquiry:\n${message}` })
+        body: JSON.stringify({ from: env.ENQUIRY_FROM, to: ['alleyneautomotive@gmail.com'], reply_to: email, subject: 'New website enquiry', text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone || 'Not provided'}\nPreferred contact: ${preference === 'phone' ? 'Phone' : 'Email'}\nVehicle or budget: ${vehicle || 'Not provided'}\n\nEnquiry:\n${message}` })
       });
       if (!sent.ok) return json({ error: 'Delivery unavailable' }, 502);
       return json({ ok: true });

@@ -69,6 +69,11 @@ const form = document.getElementById('enquiry-form');
 if (form) {
   const status = document.getElementById('form-status');
   const button = form.querySelector('button[type="submit"]');
+  const preference = document.getElementById('contact-preference');
+  const phone = document.getElementById('phone');
+  const updatePhone = () => { phone.required = preference.value === 'phone'; };
+  preference.addEventListener('change', updatePhone);
+  updatePhone();
   let widget;
   const unavailable = () => { status.textContent = 'The form is currently unavailable. Please call, email or use WhatsApp above.'; button.disabled = true; };
   fetch('/api/enquiry/config').then(r => r.ok ? r.json() : Promise.reject()).then(config => {
@@ -89,6 +94,7 @@ if (form) {
       const response = await fetch(form.action, { method: 'POST', body: new FormData(form) });
       if (!response.ok) throw new Error('Delivery unavailable');
       form.reset();
+      updatePhone();
       status.textContent = 'Your enquiry has been sent. Thank you.';
     } catch { status.textContent = 'Your enquiry could not be sent. Please try again or contact us using the details above.'; }
     finally { window.turnstile.reset(widget); button.disabled = false; }
