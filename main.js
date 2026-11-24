@@ -68,14 +68,14 @@ document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 const form = document.getElementById('enquiry-form');
 if (form) {
   const status = document.getElementById('form-status');
-  const button = form.querySelector('button[type="submit"]');
+  const button = form.querySelector('button[value="email"]');
   const preference = document.getElementById('contact-preference');
   const phone = document.getElementById('phone');
   const updatePhone = () => { phone.required = preference.value === 'phone'; };
   preference.addEventListener('change', updatePhone);
   updatePhone();
   let widget;
-  const unavailable = () => { status.textContent = 'The form is currently unavailable. Please call, email or use WhatsApp above.'; button.disabled = true; };
+  const unavailable = () => { status.textContent = 'Sending by email is currently unavailable. You can still use WhatsApp or the contact details below.'; button.disabled = true; };
   fetch('/api/enquiry/config').then(r => r.ok ? r.json() : Promise.reject()).then(config => {
     if (!config.siteKey) return unavailable();
     const script = document.createElement('script');
@@ -86,6 +86,23 @@ if (form) {
   }).catch(unavailable);
   form.addEventListener('submit', async event => {
     event.preventDefault();
+    if (event.submitter && event.submitter.value === 'whatsapp') {
+      const data = new FormData(form);
+      const message = [
+        'Hello Alleyne Automotive, I would like to make an enquiry.',
+        '',
+        `Name: ${data.get('name')}`,
+        `Email: ${data.get('email')}`,
+        `Phone: ${data.get('phone') || 'Not provided'}`,
+        `Preferred contact: ${data.get('contact_preference') === 'phone' ? 'Phone' : 'Email'}`,
+        `Vehicle or budget: ${data.get('vehicle') || 'Not provided'}`,
+        '',
+        `Enquiry: ${data.get('message')}`
+      ].join('\n');
+      window.open('https://wa.me/447497095845?text=' + encodeURIComponent(message), '_blank', 'noopener,noreferrer');
+      status.textContent = 'Review and send your message in WhatsApp.';
+      return;
+    }
     const token = widget !== undefined && window.turnstile.getResponse(widget);
     if (!token) { status.textContent = 'Please complete the spam protection check before sending.'; return; }
     button.disabled = true;

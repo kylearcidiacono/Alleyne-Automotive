@@ -9,3 +9,9 @@ Create a Cloudflare Turnstile widget for the authorised hostnames, and a transac
 Until configured, the form reports that it is unavailable; customers can call, email or use WhatsApp. Test an agreed safe enquiry end-to-end and confirm receipt and reply in the inbox. Monitor delivery errors and provider limits without storing enquiry contents in logs. The old `/enquire.html` path redirects to `/contact.html` using Cloudflare static redirects.
 
 Before launch, confirm registered office, deposit and distance-sale practices, complaints process, retention, image/video/logo permissions, data processors and consent requirements. Obtain a UK legal review. Previous main commit e9a4dfc and current main before this work are available in Git history; verify the deployed version and rollback procedure before release. Deploy only with explicit authorisation.
+
+## Added stock photography
+
+- Carlos Mazorra, car interior: https://www.pexels.com/photo/inside-of-a-car-20476286/
+- Antonio Filigno, black-and-white car detail: https://www.pexels.com/photo/black-and-white-abstract-photo-of-a-vehicle-with-exhaust-pipe-10508827/
+- Pexels licence: https://www.pexels.com/license/ . Check third-party rights and avoid implying endorsement or that photographs show actual stock.
