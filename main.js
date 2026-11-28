@@ -106,14 +106,14 @@ if (form) {
     const token = widget !== undefined && window.turnstile.getResponse(widget);
     if (!token) { status.textContent = 'Please complete the spam protection check before sending.'; return; }
     button.disabled = true;
-    status.textContent = 'Sending your enquiry?';
+    status.textContent = 'Sending your enquiry...';
     try {
       const response = await fetch(form.action, { method: 'POST', body: new FormData(form) });
       if (!response.ok) throw new Error('Delivery unavailable');
       form.reset();
       updatePhone();
       status.textContent = 'Your enquiry has been sent. Thank you.';
-    } catch { status.textContent = 'Your enquiry could not be sent. Please try again or contact us using the details above.'; }
+    } catch { status.textContent = 'We could not confirm delivery. Please contact us using the details below before trying again.'; }
     finally { window.turnstile.reset(widget); button.disabled = false; }
   });
 }

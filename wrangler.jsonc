@@ -2,6 +2,9 @@
   "name": "alleyne-automotive",
   "main": "worker/index.mjs",
   "compatibility_date": "2026-11-22",
+  "ratelimits": [
+    { "name": "ENQUIRY_RATE_LIMIT", "namespace_id": "1836219947", "simple": { "limit": 5, "period": 60 } }
+  ],
   "assets": {
     "directory": "./dist",
     "binding": "ASSETS",

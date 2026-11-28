@@ -15,3 +15,7 @@ Before launch, confirm registered office, deposit and distance-sale practices, c
 - Carlos Mazorra, car interior: https://www.pexels.com/photo/inside-of-a-car-20476286/
 - Antonio Filigno, black-and-white car detail: https://www.pexels.com/photo/black-and-white-abstract-photo-of-a-vehicle-with-exhaust-pipe-10508827/
 - Pexels licence: https://www.pexels.com/license/ . Check third-party rights and avoid implying endorsement or that photographs show actual stock.
+
+## Before deployment
+
+The build excludes about.html and testimonials.html while their content is pending; remove the exclusion only after client approval. The enquiry Worker uses the ENQUIRY_RATE_LIMIT binding (5 requests per IP per 60 seconds, per Cloudflare location); confirm its namespace does not collide with another binding in this account. Confirm Turnstile and the email provider work with the site's CSP and the final hostname. Review real email delivery, rate limiting, security headers and Cloudflare error monitoring after deployment.

@@ -11,8 +11,15 @@
 <meta name="robots" content="noindex, nofollow">
 <meta name="description" content="Our story and introduction will be added once provided by Josh.">
 <link rel="icon" type="image/png" href="media/logo.png">
+<script>
+  document.documentElement.classList.add('js');
+  window.setTimeout(function () {
+    if (!document.documentElement.classList.contains('menu-ready')) {
+      document.documentElement.classList.remove('js');
+    }
+  }, 3000);
+</script>
 <link rel="stylesheet" href="styles.css">
-<script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
 <a class="skip" href="#top">Skip to content</a>

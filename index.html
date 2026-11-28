@@ -10,8 +10,15 @@
 <title>Alleyne Automotive | BMW, Audi and Volkswagen, sourced and sold</title>
 <meta name="description" content="Independent UK dealer for BMW, Audi and Volkswagen cars. Vehicle sourcing, buying and selling, and part exchange. Viewings by appointment.">
 <link rel="icon" type="image/png" href="media/logo.png">
+<script>
+  document.documentElement.classList.add('js');
+  window.setTimeout(function () {
+    if (!document.documentElement.classList.contains('menu-ready')) {
+      document.documentElement.classList.remove('js');
+    }
+  }, 3000);
+</script>
 <link rel="stylesheet" href="styles.css">
-<script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
 <a class="skip" href="#top">Skip to content</a>
